@@ -17,7 +17,7 @@ class Database{
             d = new Database();
         return d;
     }
-    void OpenCon(String url, String user, String pass){
+    void openCon(String url, String user, String pass){
         try {
             con = DriverManager.getConnection(url, user, pass);
             l.info("New Connection connected Successfully.");
@@ -48,9 +48,10 @@ class ConnectionPool{
 
         l.info("Enter Your Choice \n 1.open \n 2.close");
         int ch = s.nextInt();
-        switch (ch) {
-            case 1 -> d1.OpenCon(url, user, pass);
-            case 2 -> d1.closeCon();
+        if (ch == 1) {
+             d1.OpenCon(url, user, pass);
+        }else{
+             d1.closeCon();
         }
     }
 }
