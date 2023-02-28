@@ -16,7 +16,7 @@ class ConnectionPool{
         l.info("Enter Your Choice \n 1.open \n 2.close");
         int ch = s.nextInt();
         if (ch == 1) {
-             d1.OpenCon(url, user, pass);
+             d1.openCon(url, user, pass);
         }else{
              d1.closeCon();
         }
