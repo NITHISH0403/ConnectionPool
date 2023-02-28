@@ -16,7 +16,7 @@ class Database{
             d = new Database();
         return d;
     }
-    void OpenCon(String url, String user, String pass){
+    void openCon(String url, String user, String pass){
         try {
             con = DriverManager.getConnection(url, user, pass);
             l.info("New Connection connected Successfully.");
